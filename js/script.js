@@ -113,7 +113,7 @@ let incr = 5,
 // console.log('Incr = ' + incr);
 // console.log('Decr = ' + decr);
 
-console.log('Incr = ' + (++incr));
+/*console.log('Incr = ' + (++incr));
 console.log('Decr = ' + (--decr));
 
 console.log(5%2);
@@ -128,4 +128,4 @@ if(incr >= 8 && decr <= 5){
 	alert('Right');
 } else alert('False');
 
-console.log(2 + 4 == '8');
+console.log(2 + 4 == '8');*/
