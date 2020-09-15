@@ -12,7 +12,6 @@ const a = prompt('One of the first watching movies?', ''),
       c = prompt('One of the first watching movies?', ''),
       d = prompt('What your opinion?');
 
-
 personalMoviesDb.movies[a] = b;
 personalMoviesDb.movies[c] = d;
 
