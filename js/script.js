@@ -128,4 +128,4 @@ if(incr >= 8 && decr <= 5){
 	alert('Right');
 } else alert('False');
 
-console.log(2 + 4 !== '8');
+console.log(2 + 4 == '8');
