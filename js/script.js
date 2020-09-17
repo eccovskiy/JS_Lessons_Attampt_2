@@ -99,10 +99,10 @@ alert(`Привет, ${user}`);*/
 
 //Операторы в JS
 
-console.log('arr' + ' - object');
+// console.log('arr' + ' - object');
 
-let incr = 5,
-	decr = 5;
+// let incr = 5,
+// 	decr = 5;
 
 // incr++;
 // decr--;
@@ -129,3 +129,98 @@ if(incr >= 8 && decr <= 5){
 } else alert('False');
 
 console.log(2 + 4 == '8');*/
+
+//Условия
+
+/*if (4 <= 9){
+	console.log('Бред');
+} else console.log('Мозг');
+
+
+
+if (num < 49) {
+	console.log('Error');
+} else if (num > 100) {
+	console.log('Again Error');
+} else if (num > 49 && num < 100) {
+	console.log('Correct');
+}
+
+(num == 50) ? console.log('Correct') : console.log('Again Error');
+
+const num = 50;
+
+switch (num) {
+	case 49:
+		console.log('Error');
+		break;
+	case 100:
+		console.log('Error');
+		break;
+	case 50:
+		console.log('Correct');
+		break;
+	default:
+		console.log('Something going wrong');
+		break;
+}
+
+const correctAnswer = 'Belgium';
+
+switch (correctAnswer) {
+	case 'Germany':
+		console.log('Error');
+		break;
+	case 'France':
+		console.log('Error');
+		break;
+	case 'Belgium':
+		console.log('Correct');
+		break;
+	default:
+		console.log('Something going wrong');
+		break;
+}
+
+var step;
+for (step = 0; step < 5; step++) {
+  // Запускается 5 раз, с шагом от 0 до 4.
+  console.log('Идём 1 шаг на восток');
+}*/
+
+//Циклы
+
+/*let num2 = 50;
+
+// while (num2 <= 55) {
+// 	console.log(num2);
+// 	num2++;
+// }
+
+// do {
+// 	console.log(num2);
+// 	num2++;
+// } while (num2 <= 55);
+
+// for (let i = 1; i < 8; i++) {
+// 	console.log(i);
+// }
+
+for (let i = 1; i < 9; i++) {
+	console.log(num2);
+	num2++;
+}
+
+for (let i = 1; i < 8; i++) {
+	if (i === 6){
+		break;
+	}
+		console.log(i);
+	}
+
+for (let i = 1; i < 8; i++) {
+	if (i === 6){
+		continue;
+	}
+		console.log(i);
+	}*/

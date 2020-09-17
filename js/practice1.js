@@ -1,4 +1,4 @@
-const numberOfFilms = +prompt('How many films are you watched?', '');
+/*const numberOfFilms = +prompt('How many films are you watched?', '');
 const personalMoviesDb = {
     count: numberOfFilms,
     movies: {},
@@ -15,4 +15,4 @@ const a = prompt('One of the first watching movies?', ''),
 personalMoviesDb.movies[a] = b;
 personalMoviesDb.movies[c] = d;
 
-console.log(personalMoviesDb);
+console.log(personalMoviesDb);*/
