@@ -224,3 +224,47 @@ for (let i = 1; i < 8; i++) {
 	}
 		console.log(i);
 	}*/
+
+// Функции
+
+let num = 20;
+
+function showFirstMassage(text) {
+	console.log(text);
+	// let num = 15;
+	num = 15;
+	console.log(num);
+}
+
+showFirstMassage('Hello world!');
+console.log(num);
+
+function calc(a, b) {
+	return (a + b);
+}
+
+console.log(calc(5, 8));
+console.log(calc(15, 5));
+console.log(calc(4, 7));
+
+function ret() {
+	let num = 50;
+	return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+let logger = function() {
+	console.log('Express');
+};
+
+logger();
+
+const calc2 = (a, b) => {
+	console.log('1');
+	return a + b;
+}
+
+calc2();
+console.log(calc2(8, 6));
