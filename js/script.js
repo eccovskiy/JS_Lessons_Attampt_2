@@ -227,7 +227,7 @@ for (let i = 1; i < 8; i++) {
 
 // Функции
 
-let num = 20;
+/*let num = 20;
 
 function showFirstMassage(text) {
 	console.log(text);
@@ -267,4 +267,32 @@ const calc2 = (a, b) => {
 }
 
 calc2();
-console.log(calc2(8, 6));
+console.log(calc2(8, 6));*/
+
+// Методы и свойства строк и чисел
+
+const str = 'text';
+
+const arr2 = [1, 5, 9];
+
+// console.log(str.length);
+// console.log(arr2.length);
+
+console.log(str.toUpperCase());
+console.log(str);
+
+const fruit = 'Some fruit';
+
+console.log(fruit.indexOf('q'));
+
+const logg = 'Hello world';
+
+console.log(logg.slice(6, 11));
+
+console.log(logg.substring(6, 11));
+
+console.log(logg.substr(6, 5));
+
+const numMath = 12.5;
+
+console.log(Math.round(numMath));
