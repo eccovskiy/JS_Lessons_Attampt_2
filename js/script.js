@@ -271,7 +271,7 @@ console.log(calc2(8, 6));*/
 
 // Методы и свойства строк и чисел
 
-const str = 'text';
+/*const str = 'text';
 
 const arr2 = [1, 5, 9];
 
@@ -295,4 +295,34 @@ console.log(logg.substr(6, 5));
 
 const numMath = 12.5;
 
-console.log(Math.round(numMath));
+console.log(Math.round(numMath));*/
+
+// Callback - функция
+
+function first() {
+	setTimeout(function() {
+		console.log(1);
+	}, 500);
+}
+
+function second() {
+	console.log(2);
+}
+
+first();
+second();
+
+function learnJS(lang, callback) {
+	console.log(`Я учу: ${lang}`);
+	callback();
+}
+
+function done() {
+	console.log('Я прошёл этот урок');
+}
+
+// learnJS('Javascript', function() {
+// 	console.log('Я прошёл этот урок');
+// });
+
+learnJS('Javascript', done);
