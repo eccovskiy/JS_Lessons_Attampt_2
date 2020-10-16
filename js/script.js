@@ -299,7 +299,7 @@ console.log(Math.round(numMath));*/
 
 // Callback - функция
 
-function first() {
+/*function first() {
 	setTimeout(function() {
 		console.log(1);
 	}, 500);
@@ -325,4 +325,56 @@ function done() {
 // 	console.log('Я прошёл этот урок');
 // });
 
-learnJS('Javascript', done);
+learnJS('Javascript', done);*/
+
+// Объекты, деструктуризация объектов (ES6)
+
+//const obj2 = new Object();
+
+const option = {
+	name: 'Alex',
+	width: 1024,
+	height: 1024,
+	colors: {
+		border: 'black',
+		bg: 'red',
+	},
+	makeTest: function() {
+		console.log('Test');
+	}
+};
+
+option.makeTest();
+
+const {border, bg} = option.colors;
+
+console.log(border);
+
+// console.log(option.name);
+
+// console.log(option['colors']['border']);
+
+// delete option.name;
+
+// console.log(option);
+
+// let counter = 0; // Счётчик
+
+// for (let key in option){
+// 	if (typeof(option[key]) === 'object'){
+// 		for (let iteration in option[key]) {
+// 			console.log(`Свойство ${iteration} имеет значение ${option[key][iteration]}`);
+// 			counter++;
+// 		}
+// 	} else {
+// 		console.log(`Свойство ${key} имеет значение ${option[key]}`);
+// 		counter++;
+// 	}
+// }
+
+// console.log('Количесвто =' + ' ' + counter);
+
+// console.log(Object.keys(option).length);
+
+
+
