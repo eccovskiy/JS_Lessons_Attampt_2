@@ -376,5 +376,39 @@ console.log(border);
 
 // console.log(Object.keys(option).length);
 
+// Массивы и псевдомассивы
 
+const arr3 = [1, 25, 36, 14, 5];
+// arr3[99] = 100;
+// console.log(arr3.length);
+// console.log(arr3);
 
+arr3.sort(compareNum);
+console.log(arr3);
+
+function compareNum(a, b) {
+	return a - b;
+}
+
+arr3.forEach(function(item, i ,arr3) {
+	console.log(`${i}: ${item} внутри массивы ${arr3}`);
+});
+
+// const string = prompt("", "");
+// const products = string.split(', ');
+// console.log(products.sort);
+// console.log(products.join('; '));
+
+// arr3.pop();
+
+// arr3.push(10);
+
+// console.log(arr3);
+
+for (let i = 0; i < arr3.length; i++) {
+	console.log(arr3[i]);
+}
+
+for (let value of arr3) {
+	console.log(value);
+}
