@@ -1,6 +1,5 @@
 "use strict";
 
-
 // Переменные и строгий режим use "strict"
 
 /*let number = 5;
@@ -10,7 +9,7 @@ number = 10;
 console.log(number);
 document.write(number);*/
 
-let number = 4.6;
+/*let number = 4.6;
 
 console.log(-4/0);
 
@@ -33,7 +32,7 @@ console.log(obj.name);
 console.log(obj.age);
 
 let arr = ['plum.png', 'orange,jpg', 'apple.bmp'];
-console.log(arr[1]);
+console.log(arr[1]);*/
 
 //Общение с пользователем alert, confirm, prompt
 // alert('Hello!');
@@ -331,7 +330,7 @@ learnJS('Javascript', done);*/
 
 //const obj2 = new Object();
 
-const option = {
+/*const option = {
 	name: 'Alex',
 	width: 1024,
 	height: 1024,
@@ -348,7 +347,7 @@ option.makeTest();
 
 const {border, bg} = option.colors;
 
-console.log(border);
+console.log(border);*/
 
 // console.log(option.name);
 
@@ -378,7 +377,7 @@ console.log(border);
 
 // Массивы и псевдомассивы
 
-const arr3 = [1, 25, 36, 14, 5];
+/*const arr3 = [1, 25, 36, 14, 5];
 // arr3[99] = 100;
 // console.log(arr3.length);
 // console.log(arr3);
@@ -411,4 +410,115 @@ for (let i = 0; i < arr3.length; i++) {
 
 for (let value of arr3) {
 	console.log(value);
+}*/
+
+// Передача по ссылке или по значению. Spread оператор (ES6 - ES-9)
+
+// let a = 5,
+// 	b = a;
+
+// b = b + 5;
+
+// console.log(b);
+// console.log(a);
+
+// const obj = {
+// 	a: 5,
+// 	b: 1
+// }
+
+// const copy = obj;
+
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+function copy(mainObj) {
+	let objCopy = {};
+
+	let key;
+	for (key in mainObj) {
+		objCopy[key] = mainObj[key];
+	}
+
+	return objCopy;
 }
+
+const numbers = {
+	a: 2,
+	b: 5,
+	c: {
+		x: 7,
+		y: 4
+	}
+};
+
+const newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+newNumbers.c.x = 10;
+
+console.log(numbers);
+console.log(newNumbers);
+
+const add = {
+	d: 17,
+	e: 20
+};
+
+// console.log(Object.assign(numbers, add));
+
+const clone = Object.assign({}, add);
+
+clone.d = 20;
+
+// console.log(add);
+// console.log(clone);
+
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
+
+newArray[2] = 'q';
+
+console.log(oldArray);
+console.log(newArray);
+
+const video = ['yputube', 'vimeo', 'rutube'],
+	  blogs = ['wordpress', 'livejournal', 'blogger'],
+	  internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);
+
+function log(a, b, c, d) {
+	console.log(a);
+	console.log(b);
+	console.log(c);
+	console.log(d);
+	console.log(a, d);
+}
+
+const num = [2, 5, 7, 10];
+
+log(...num);
+
+const array = ["a", "b"];
+
+const newAarray = [...array];
+
+newAarray[0] = "t";
+
+console.log(array);
+console.log(newAarray);
+
+const q = {
+	one: 1,
+	two: 2
+};
+
+const newObj = {...q};
+
+newObj.one = 15;
+
+console.log(q);
+console.log(newObj);
