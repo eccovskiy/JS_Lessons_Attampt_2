@@ -434,7 +434,7 @@ for (let value of arr3) {
 // console.log(copy);
 // console.log(obj);
 
-function copy(mainObj) {
+/*function copy(mainObj) {
 	let objCopy = {};
 
 	let key;
@@ -521,4 +521,34 @@ const newObj = {...q};
 newObj.one = 15;
 
 console.log(q);
-console.log(newObj);
+console.log(newObj);*/
+
+// Основы ООП, прототипно-ориентированное программирование
+
+let str = 'some';
+let strObj = new String(str);
+
+// console.log(typeof(str));
+// console.log(typeof(strObj));
+
+console.dir([1 , 2, 3]);
+
+const soldier = {
+	health: 400,
+	armor: 100,
+	sayHello: function() {
+		console.log('Hello');
+	}
+};
+
+const john = {
+	health: 100
+};
+
+john.__proto__ = soldier;
+
+Object.setPrototypeOf(john, soldier);
+
+// console.log(john.armor);
+
+john.sayHello();
