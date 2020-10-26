@@ -525,7 +525,7 @@ console.log(newObj);*/
 
 // Основы ООП, прототипно-ориентированное программирование
 
-let str = 'some';
+/*let str = 'some';
 let strObj = new String(str);
 
 // console.log(typeof(str));
@@ -551,4 +551,4 @@ Object.setPrototypeOf(john, soldier);
 
 // console.log(john.armor);
 
-john.sayHello();
+john.sayHello();*/
