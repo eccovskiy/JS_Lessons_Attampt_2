@@ -664,3 +664,6 @@ console.log(typeof(Boolean(null)));
 // 12) Чему равно 0 || "" || 2 || undefined || true || falsе ?
 
 //console.log(0 || "" || 2 || undefined || true || falsе); // 2
+
+// Получение элементов со страницы
+
