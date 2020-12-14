@@ -238,7 +238,7 @@ function showFirstMassage(text) {
 showFirstMassage('Hello world!');
 console.log(num);
 
-function calc(a, b) {
+function calc(a, b, c) {
 	return (a + b);
 }
 
@@ -671,3 +671,229 @@ console.log(typeof(Boolean(null)));
 
 // # 31 События и их обработчики
 
+// function checkAge (age) {
+// 	if (age > 18) {
+// 		return true;
+// 	} else {
+// 		confirm ('Thats not you');
+// 	}
+// }
+
+// function checkAge (age) {
+// 	return (age > 18) ? true : confirm ('Thats not you');
+// }
+
+// function checkAge (age) {
+// 	return (age > 18) || confirm ('Thats not you');
+// }
+
+// checkAge (12);
+
+// function min (a, b) {
+// 	if (a < b) {
+// 		alert ('a');
+// 		return a;
+// 	} else if (b < a) {
+// 		alert ('b');
+// 		return b;
+// 	} else {
+// 		alert ('equal');
+// 	}
+// }
+
+// function min (a, b) {
+// 	return (a < b) ? a : b;
+// }
+
+// min (15, 15);
+
+// function pow (x, n) {
+// 	let result = x;
+// 	for (let i = 1; i < n; i++){
+// 		(result *= x);
+// 	}
+// 	return result;
+// }
+
+// let x = prompt("x?", '');
+// let n = prompt("n?", '');
+
+// if (n < 1) {
+//   alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+// } else {
+//   alert( pow(x, n) );
+// }
+
+// if (Number.isInteger(x) && Number.isInteger(n)) {
+// 	alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+//   } else {
+// 	alert( pow(x, n) );
+//   }
+
+//   function pow (x, n) {
+// 	if (Number.isInteger(x) && Number.isInteger(n)) {
+// 	return x ** n;
+// 	}
+// 	}
+	
+// 	let x = +prompt('Ведите значение x', '0');
+// 	let n = +prompt('Ведите значение n', '0');
+// 	let result = pow(x, n);
+	
+// 	if (pow (x, n) && n > 0) {
+// 	alert(result);
+// 	} else {
+// 	alert('Попробуйте еще раз');
+// 	}
+
+	// let JSNaame = prompt ('Какое "официальное" название JavaScript?', '');
+
+	// if (JSNaame == 'ECMAScript') {
+	// 	alert('Правильно');
+	// } else {
+	// 	alert('Не знаете? “ECMAScript”!');
+	// }
+
+	// let number = +prompt('Input a number', '');
+
+	// if (number != isNaN){
+	// 	alert('Try again');
+	// }else if (number > 0){
+	// 	alert('1');
+	// } else if (number < 0) {
+	// 	alert('-1');
+	// } else if (number === 0){
+	// 	alert('0');
+	// }
+
+	// let result,
+	// 	a = +prompt('Введите а'),
+	// 	b = +prompt('Введите b');
+
+	// result = (a + b < 4) ? alert('Мало') : result = (a + b > 4) ? alert('Много') : (a != isNaN) ? alert('Try again');
+
+	// if ((result != isNaN) || (result != isNaN)) {
+	// 	alert('Try again');
+	// } 
+	
+	// if (result = a + b < 4) {
+	// 	alert('Мало');
+	// } else {
+	// 	alert('Много');
+	// }
+	// let login = prompt('Enter name', '');
+
+	// let message = (login == 'Сотрудник') ? alert('Hi') : (login == 'Директор') ? alert('Hello') : (login == '') ? alert('No login') : '';
+
+
+// let admin,
+// 	name = 'John';
+
+// admin = name;
+
+// alert(admin);
+
+// let a = +prompt('Введите число', ''),
+// 	b = +prompt('Введите число', '');
+
+// if (Number.isNaN(a) || Number.isNaN(b)) {
+// 	alert('Error');
+// } else if (b > 5 || ' ') {
+// 	alert('Number Error');
+// } else {
+// 	alert('Done');
+// }
+
+// let a = prompt("Первое число?", 1);
+// let b = prompt("Второе число?", 2);
+
+// alert(Number(a) + Number(b)); // 3
+// alert(+a + +b); // 3
+
+// let age = +prompt('Введите свой возраст', '');
+
+// if (!(age >= 14 && age <= 90)) {
+// 	alert('Done');
+// } else {
+// 	alert('404');
+// }
+
+// let login = prompt('Ваш логин', '');
+
+// if (login == 'Админ') {
+// 	let passward = prompt('Введите пароль', '');
+// 	if (passward == 'Я главный'){
+// 		alert('Здравствуйте');
+// 	} else if (passward == '' || passward == null) {
+// 		alert('Отмена');
+// 	} else {
+// 		alert('Неверный пароль');
+// 	}
+// } else if (login == '' || login == null) {
+// 	alert('Отменено');
+// } else {
+// 	alert('Я вас не знаю');
+// }
+
+let num = 20;
+
+function showSecondMassage(text){
+	console.log(text);
+	let num = 10;
+	// console.log(num);
+}
+
+showSecondMassage('Hello world');
+console.log(num);
+
+let val1 = 2
+function multiplyThis(n) {
+   let ret = n * val1;
+   return ret;
+ }
+ let multiplied = multiplyThis(6);
+ console.log('example of scope:', multiplied);
+
+ let val = 7;
+  function createAdder() {
+    function addNumbers(a, b) {
+     let ret = a + b;
+     return ret;
+   }
+   return addNumbers;
+  }
+ let adder = createAdder();
+let sum = adder(val, 8);
+console.log('example of function returning a function: ', sum);
+
+function createCounter() {
+	   let counter = 0;
+	   const myFunction = function() {
+	    counter = counter + 1;
+	     return counter;
+	   }
+	   return myFunction;
+	 }
+	 const increment = createCounter();
+    const c1 = increment();
+    const c2 = increment();
+    const c3 = increment();
+	console.log('example increment', c1, c2, c3);
+	
+	let c = 4;
+const addX = x => n => n + x;
+const addThree = addX(3);
+let d = addThree(c);
+console.log('example partial application', d);
+
+let c = 4;
+function addX(x) {
+  return function(n) {
+	console.log(n);
+	return n + x;
+	 
+  };
+}
+const addThree = addX(3);
+let d = addThree(c);
+console.log('example partial application', d);
