@@ -835,65 +835,218 @@ console.log(typeof(Boolean(null)));
 // 	alert('Я вас не знаю');
 // }
 
-let num = 20;
+// let num = 20;
 
-function showSecondMassage(text){
-	console.log(text);
-	let num = 10;
-	// console.log(num);
-}
+// function showSecondMassage(text){
+// 	console.log(text);
+// 	let num = 10;
+// 	// console.log(num);
+// }
 
-showSecondMassage('Hello world');
-console.log(num);
+// showSecondMassage('Hello world');
+// console.log(num);
 
-let val1 = 2
-function multiplyThis(n) {
-   let ret = n * val1;
-   return ret;
- }
- let multiplied = multiplyThis(6);
- console.log('example of scope:', multiplied);
+// let val1 = 2
+// function multiplyThis(n) {
+//    let ret = n * val1;
+//    return ret;
+//  }
+//  let multiplied = multiplyThis(6);
+//  console.log('example of scope:', multiplied);
 
- let val = 7;
-  function createAdder() {
-    function addNumbers(a, b) {
-     let ret = a + b;
-     return ret;
-   }
-   return addNumbers;
-  }
- let adder = createAdder();
-let sum = adder(val, 8);
-console.log('example of function returning a function: ', sum);
+//  let val = 7;
+//   function createAdder() {
+//     function addNumbers(a, b) {
+//      let ret = a + b;
+//      return ret;
+//    }
+//    return addNumbers;
+//   }
+//  let adder = createAdder();
+// let sum = adder(val, 8);
+// console.log('example of function returning a function: ', sum);
 
-function createCounter() {
-	   let counter = 0;
-	   const myFunction = function() {
-	    counter = counter + 1;
-	     return counter;
-	   }
-	   return myFunction;
-	 }
-	 const increment = createCounter();
-    const c1 = increment();
-    const c2 = increment();
-    const c3 = increment();
-	console.log('example increment', c1, c2, c3);
+// function createCounter() {
+// 	   let counter = 0;
+// 	   const myFunction = function() {
+// 	    counter = counter + 1;
+// 	     return counter;
+// 	   }
+// 	   return myFunction;
+// 	 }
+// 	 const increment = createCounter();
+//     const c1 = increment();
+//     const c2 = increment();
+//     const c3 = increment();
+// 	console.log('example increment', c1, c2, c3);
 	
-	let c = 4;
-const addX = x => n => n + x;
-const addThree = addX(3);
-let d = addThree(c);
-console.log('example partial application', d);
+// 	let c = 4;
+// const addX = x => n => n + x;
+// const addThree = addX(3);
+// let d = addThree(c);
+// console.log('example partial application', d);
 
-let c = 4;
-function addX(x) {
-  return function(n) {
-	console.log(n);
-	return n + x;
+// let c = 4;
+// function addX(x) {
+//   return function(n) {
+// 	console.log(n);
+// 	return n + x;
 	 
-  };
+//   };
+// }
+// const addThree = addX(3);
+// let d = addThree(c);
+// console.log('example partial application', d);
+
+// function ret() {
+// 	let num = 50;
+// 	return num;
+// }
+
+// let anotherNumber = ret();
+
+// console.log(anotherNumber);
+
+// let foo = function() {
+	
+// };
+
+// let str = 'test';
+
+// console.log(str[0].toUpperCase());
+// console.log(str);
+
+// const arr3 = [1, 2, 3, 4, 5];
+
+// let reta = {
+// 	name: 'alex',
+// 	age: 12
+// };
+
+// arr3.push(reta);
+
+// // console.log(arr3);
+
+// for (let i = 0; i < arr3.length; i++){
+// 	console.log(arr3[i]);
+// }
+
+// for (let value of arr3){
+// 	console.log(value);
+// }
+
+// arr3.forEach(function(item, i, arr3){
+// 	console.log(`${i+1}: ${item} from array ${arr3}`);
+// });
+
+// let prd = prompt('', '');
+// let products = prd.split(', ');
+// products.sort(compareNum); // Чтобы сортировка шла так как мы её записали, а не от а до я
+// console.log(products.join('; '));
+
+// function compareNum(a, b) {
+// 	return a - b;
+// }
+
+// let a = 5,
+// 	b = a;
+
+// b = b + 5;
+
+// console.log(b);
+// console.log(a);
+
+// const obj = {
+// 	a: 5,
+// 	b: 1
+// };
+
+// let copy = obj;
+
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+function copy (mainObj) {
+	let objCopy = {};
+
+	let key;
+	for (key in mainObj) {
+		objCopy[key] = mainObj[key];
+	}
+
+	return objCopy;
 }
-const addThree = addX(3);
-let d = addThree(c);
-console.log('example partial application', d);
+
+const numbers = {
+	a: 2,
+	b: 5,
+	c: {
+		x: 7,
+		y: 4
+	}
+};
+
+const newNumbers = copy (numbers);
+
+newNumbers.b = 8;
+
+console.log(numbers);
+console.log(newNumbers);
+
+const add = {
+	d: 17,
+	e: 20,
+	f: {
+		z: 17
+	}
+};
+
+console.log(Object.assign(numbers, add));
+
+console.log(numbers);
+
+const clone = Object.assign({}, add);
+
+clone.d = 22;
+
+console.log(clone);
+console.log(add);
+
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
+
+newArray[1] = 'd';
+
+console.log(newArray);
+console.log(oldArray);
+
+const video = ['youtube', 'vimeo', 'rutube'],
+	  blogs = ['wordpress', 'livejournal', 'blogger'],
+	  internet = [...video, ...blogs, ...[12]];
+
+console.log(internet);
+
+function log(a, b, c){
+	console.log(a);
+	console.log(b);
+	console.log(c);
+}
+
+const num = [11, 33, 22];
+
+log(...num);
+
+const array = ['a', 'b'];
+
+const newArrray = [...array];
+
+const q = {
+	one: 1,
+	two: 2
+};
+
+const newQ = {...q};
+
+console.log(newQ);
